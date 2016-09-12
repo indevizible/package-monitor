@@ -57,7 +57,7 @@ function PackageMonitor(serviceAccount, databaseURL, emailService) {
         
         request('https://play.google.com/store/apps/details?id='+ pck.id , function (error, response, body) {
             var invalid = (response.statusCode == 404);
-            if (invalid) {
+            if (invalid && (pck.status == true)) {
                 sendMailFor(pck.id, pck.name);
             }
             var updateData = {
