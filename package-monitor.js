@@ -46,6 +46,8 @@ function PackageMonitor(serviceAccount, databaseURL, emailService) {
     		        checkPackage(packages[key], key);
     		    }
             }, Math.floor( (60 * 60 * 24 * 1000) / ( 1 + Object.keys(packages).length )));
+            
+            console.log("[PACKAGE MONITOR] Start Monitor Every " +  Math.floor( (60 * 60 * 24 * 1000) / ( 1 + Object.keys(packages).length )) + " secs.");
     	}else{
     	    packages = packs;
     	}
@@ -103,9 +105,5 @@ function PackageMonitor(serviceAccount, databaseURL, emailService) {
     }
 
 }
-// serviceAccount: "./firebase.json",
-//       databaseURL: "https://packagemonitor.firebaseio.com/"
 
-
-// END CONFIG THIS
 module.exports = PackageMonitor;
