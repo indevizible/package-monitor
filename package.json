@@ -1,0 +1,14 @@
+{
+  "name": "package-monitor",
+  "version": "1.0.0",
+  "description": "Package Monitor",
+  "main": "index.js",
+  "repository": "",
+  "author": "Nattawut Singhchai <wut@indevizible.com>",
+  "dependencies": {
+    "express": "^4.14.0",
+    "firebase": "^3.3.0",
+    "nodemailer": "^2.5.0",
+    "request": "^2.74.0"
+  }
+}
